@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.link {
+	@apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
+}
+
+.p-clamp {
+	width: clamp(45ch, 50%, 75ch);
+}
+
+.nav-item {
+	@apply text-green-bp1 hover:text-green-bp2 px-2;
+}
+
+.main-heading {
+	@apply text-2xl text-center mt-8;
+}
+
+.input-field {
+	@apply shadow appearance-none border rounded py-2 px-3
+	text-gray-700 leading-tight focus:outline-none;
+}
+
+.input-label {
+	@apply px-1 pt-3 pb-1;
+}
+
+.action-card {
+	@apply flex flex-col p-5 border rounded-lg w-min shadow;
+}
+
+.game-card {
+	@apply flex flex-col p-5 my-2 border rounded-lg shadow;
+}
+
+.green-btn {
+	@apply text-white font-bold py-1 px-4 mt-5
+	rounded bg-green-bp1 hover:bg-green-bp3;
+}
+
+.metamask-btn {
+	@apply text-white font-bold py-1 px-4
+	rounded bg-green-bp1 hover:bg-green-bp3;
+}
+
+.blue-btn {
+	@apply bg-blue-500 hover:bg-blue-600 text-white
+	font-bold py-1 px-4 rounded;
+}

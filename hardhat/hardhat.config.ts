@@ -1,9 +1,17 @@
-require('@nomiclabs/hardhat-ethers');
-require('@nomiclabs/hardhat-waffle');
-require('@nomiclabs/hardhat-solhint');
-require('solidity-coverage');
-require('hardhat-gas-reporter');
-require('dotenv').config();
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+import { task } from 'hardhat/config';
+import 'dotenv/config';
+import '@nomiclabs/hardhat-ethers';
+import '@nomiclabs/hardhat-waffle';
+import '@nomiclabs/hardhat-solhint';
+import '@typechain/hardhat';
+import '@typechain/ethers-v5';
+import 'hardhat-gas-reporter';
+import 'hardhat-contract-sizer';
+import '@openzeppelin/hardhat-upgrades';
+
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
@@ -14,21 +22,28 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
 	}
 });
 
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
+// You need to export an object to set up your config
+// Go to https://hardhat.org/config/ to learn more
+
 module.exports = {
 	defaultNetwork: 'localhost',
 	gasReporter: {
 		currency: 'USD',
+		coinmarketcap: process.env.COINMARKETCAP_API_KEY ? true : false,
+		maxMethodDiff: 10,
 		enabled: process.env.REPORT_GAS ? true : false,
 		excludeContracts: [],
 		src: './contracts'
 	},
+	contractSizer: {
+		alphaSort: true,
+		runOnCompile: true,
+		disambiguatePaths: false
+	},
 	networks: {
 		rinkeby: {
 			url: process.env.INFURA_RINKEBY_KEY,
-			accounts: [process.env.PRIVATE_KEY_22]
+			accounts: [process.env.PRIVATE_KEY_29]
 		},
 		// hardhat: {
 		// 	forking: {
@@ -37,11 +52,11 @@ module.exports = {
 		// },
 		kovan: {
 			url: process.env.INFURA_KOVAN_KEY,
-			accounts: [process.env.PRIVATE_KEY_22]
+			accounts: [process.env.PRIVATE_KEY_29]
 		},
 		ropsten: {
 			url: process.env.INFURA_ROPSTEN_KEY,
-			accounts: [process.env.PRIVATE_KEY_22]
+			accounts: [process.env.PRIVATE_KEY_29]
 		}
 		// polygon_mainnet: {},
 		// mumbai: {}
@@ -67,5 +82,11 @@ module.exports = {
 				}
 			}
 		]
+	},
+	paths: {
+		sources: './contracts',
+		tests: './test',
+		cache: './cache',
+		artifacts: './artifacts'
 	}
 };

@@ -14,7 +14,8 @@ body {
 }
 
 .link {
-	@apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
+	@apply underline text-blue-600
+	hover:text-blue-800 visited:text-purple-600;
 }
 
 .p-clamp {
@@ -25,8 +26,17 @@ body {
 	@apply text-green-bp1 hover:text-green-bp2 px-2;
 }
 
+.active-nav {
+	@apply border-b-2 border-green-300 text-green-bp1
+	hover:text-green-bp2 hover:border-green-bp2 px-2;
+}
+
 .main-heading {
-	@apply text-2xl text-center mt-8;
+	@apply text-3xl text-center font-bold mt-8;
+}
+
+.h3-heading {
+	@apply text-xl text-center font-bold;
 }
 
 .input-field {
@@ -59,4 +69,9 @@ body {
 .blue-btn {
 	@apply bg-blue-500 hover:bg-blue-600 text-white
 	font-bold py-1 px-4 rounded;
+}
+
+.disabled-btn {
+	@apply bg-gray-500 text-white font-bold py-2 px-4
+	rounded opacity-50 cursor-not-allowed;
 }

@@ -6,22 +6,22 @@ const ipfs = create({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' });
 /**
  * Uploads the file to IPFS.
  * @notice Must use `await` with this function.
- * @param fileBuffer The file converted into a buffer.
+ * @param {Buffer} fileBuffer The file converted into a buffer.
  * @returns The IPFS CID hash.
  */
-export async function uploadIPFS(fileBuffer: string) {
+export async function uploadIPFS(fileBuffer: Buffer) {
 	try {
 		const { path } = await ipfs.add(fileBuffer);
 		return path;
-	} catch (err) {
-		console.log(err);
+	} catch (e) {
+		console.error(e);
 	}
 }
 
 /**
  * Pins the file to Pinata
  * @notice Must use `await` with this function.
- * @param hash The IPFS CID to pin.
+ * @param {string} hash The IPFS CID to pin.
  */
 export async function pinNFT(hash: string) {
 	try {
@@ -36,7 +36,7 @@ export async function pinNFT(hash: string) {
 				}
 			}
 		);
-	} catch (err) {
-		console.log(err);
+	} catch (e) {
+		console.error(e);
 	}
 }

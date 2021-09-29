@@ -22,9 +22,10 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
 	}
 });
 
+const INFURA_KEY = process.env.INFURA_API_KEY;
+
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
-
 module.exports = {
 	defaultNetwork: 'localhost',
 	gasReporter: {
@@ -41,25 +42,54 @@ module.exports = {
 		disambiguatePaths: false
 	},
 	networks: {
-		rinkeby: {
-			url: process.env.INFURA_RINKEBY_KEY,
-			accounts: [process.env.PRIVATE_KEY_29]
-		},
 		// hardhat: {
 		// 	forking: {
-		// 		url: process.env.INFURA_RINKEBY_KEY
+		// 		url: process.env.INFURA_KEY
 		// 	}
 		// },
+		// mainnet: {
+		// 	url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+		// 	accounts: [process.env.PRIVATE_KEY]
+		// },
+		rinkeby: {
+			url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
+		},
 		kovan: {
-			url: process.env.INFURA_KOVAN_KEY,
-			accounts: [process.env.PRIVATE_KEY_29]
+			url: `https://kovan.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
 		},
 		ropsten: {
-			url: process.env.INFURA_ROPSTEN_KEY,
-			accounts: [process.env.PRIVATE_KEY_29]
+			url: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
+		},
+		goerli: {
+			url: `https://goerli.infura.io/v3/${INFURA_KEY}`
+		},
+		polygon_mainnet: {
+			url: `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
+		},
+		mumbai: {
+			url: `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
+		},
+		arbitrum_mainnet: {
+			url: `https://arbitrum-mainnet.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
+		},
+		arbitrum_rinkeby: {
+			url: `https://arbitrum-rinkeby.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
+		},
+		optimism_mainnet: {
+			url: `https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
+		},
+		optimism_kovan: {
+			url: `https://optimism-kovan.infura.io/v3/${INFURA_KEY}`,
+			accounts: [process.env.PRIVATE_KEY]
 		}
-		// polygon_mainnet: {},
-		// mumbai: {}
 	},
 	solidity: {
 		compilers: [

@@ -1,6 +1,9 @@
 {
 	"name": "hardhat-project",
 	"license": "ISC",
+	"scripts": {
+		"postinstall": "typechain"
+	},
 	"devDependencies": {
 		"@nomiclabs/hardhat-ethers": "^2.0.2",
 		"@nomiclabs/hardhat-solhint": "^2.0.0",

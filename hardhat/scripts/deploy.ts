@@ -3,7 +3,7 @@
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-import { hre } from 'hardhat';
+import hre from 'hardhat';
 
 async function main() {
 	// We get the contract to deploy

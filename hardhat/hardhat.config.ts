@@ -10,6 +10,7 @@ import '@typechain/hardhat';
 import '@typechain/ethers-v5';
 import 'hardhat-gas-reporter';
 import 'hardhat-contract-sizer';
+import 'solidity-coverage';
 import '@openzeppelin/hardhat-upgrades';
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -112,11 +113,5 @@ module.exports = {
 				}
 			}
 		]
-	},
-	paths: {
-		sources: './contracts',
-		tests: './test',
-		cache: './cache',
-		artifacts: './artifacts'
 	}
 };

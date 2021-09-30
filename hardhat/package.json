@@ -1,7 +1,7 @@
 {
 	"name": "typescript-hardhat",
 	"scripts": {
-		"postinstall": "typechain"
+		"postinstall": "npx hardhat typechain"
 	},
 	"devDependencies": {
 		"@nomiclabs/hardhat-ethers": "^2.0.2",

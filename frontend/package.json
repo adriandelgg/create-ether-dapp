@@ -13,7 +13,10 @@
 		"ipfs-http-client": "^53.0.1",
 		"next": "11.1.2",
 		"react": "17.0.2",
-		"react-dom": "17.0.2"
+		"react-dom": "17.0.2",
+		"react-loader-spinner": "^4.0.0",
+		"react-toastify": "^8.0.3",
+		"react-toggle-dark-mode": "^1.0.4"
 	},
 	"devDependencies": {
 		"@types/dotenv": "^8.2.0",

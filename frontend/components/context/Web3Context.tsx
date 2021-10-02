@@ -26,7 +26,7 @@ const Web3ProviderComponent: React.FC = ({ children }) => {
 
 			setWeb3((prev: Web3) => ({
 				...prev,
-				contract: Contract__factory.connect(signer),
+				contract: contract.connect(signer),
 				account: signer._address
 			}));
 		}

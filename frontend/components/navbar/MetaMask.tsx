@@ -35,7 +35,7 @@ const MetaMask = () => {
 					case '0x3': // Ropsten
 						contractAddress = '';
 						break;
-					case '0x4':
+					case '0x4': // Rinkeby
 						contractAddress = '';
 						break;
 					case '0x89': // Polygon Mainnet

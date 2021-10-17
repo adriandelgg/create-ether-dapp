@@ -1,7 +1,13 @@
 {
 	"name": "typescript-hardhat",
+	"license": "MIT",
 	"scripts": {
 		"postinstall": "npx hardhat typechain"
+	},
+	"dependencies": {
+		"@openzeppelin/contracts": "^4.3.2",
+		"@openzeppelin/contracts6": "npm:@openzeppelin/contracts@^3.4.0",
+		"dotenv": "^10.0.0"
 	},
 	"devDependencies": {
 		"@nomiclabs/hardhat-ethers": "^2.0.2",
@@ -29,10 +35,5 @@
 		"ts-node": "^10.2.1",
 		"typechain": "^5.1.2",
 		"typescript": "^4.4.3"
-	},
-	"dependencies": {
-		"@openzeppelin/contracts": "^4.3.2",
-		"@openzeppelin/contracts6": "npm:@openzeppelin/contracts@^3.4.0",
-		"dotenv": "^10.0.0"
 	}
 }

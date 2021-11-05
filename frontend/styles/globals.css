@@ -11,6 +11,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
+	/* height: 100%; */
 	@apply bg-gray-50 dark:bg-gray-800 dark:text-indigo-50;
 }
 
@@ -20,6 +21,46 @@ button {
 
 ol {
 	@apply list-decimal;
+}
+
+ul {
+	@apply list-disc;
+}
+
+header {
+	animation: fadeInDown 1.5s;
+}
+
+main {
+	animation: fadeInUp 1.5s;
+}
+
+footer {
+	animation: fadeInUp 1.5s;
+}
+
+.fade-in {
+	animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
 }
 
 .link {
@@ -32,12 +73,12 @@ ol {
 }
 
 .nav-item {
-	@apply text-green-bp1 hover:text-green-800 px-2
+	@apply text-green-bp1 hover:text-green-800 px-2 list-none
 	font-medium text-lg dark:text-green-bp2 dark:hover:text-yellow-400;
 }
 
 .active-nav {
-	@apply border-b-2 border-green-300 text-green-bp1
+	@apply border-b-2 border-green-300 text-green-bp1 list-none
 	hover:text-green-800 hover:border-green-800 px-2
 	font-medium text-lg dark:text-green-bp2 dark:hover:text-yellow-400
 	dark:border-green-300 dark:hover:border-yellow-400;
@@ -53,16 +94,27 @@ ol {
 
 .input-field {
 	@apply shadow appearance-none border rounded py-2 px-3
-	text-gray-700 leading-tight focus:outline-none
-	dark:bg-gray-700 dark:text-gray-100 dark:border-gray-300 dark:shadow-2xl;
+	text-gray-700 leading-tight focus:outline-none focus:border-green-500
+	dark:bg-gray-700 dark:text-gray-100 dark:border-gray-300 dark:shadow-2xl
+	dark:focus:border-green-500;
 }
 
 .input-label {
-	@apply px-1 pt-3 pb-1;
+	@apply px-1 pt-3 pb-1 font-medium text-lg;
 }
 
 .action-card {
 	@apply flex flex-col p-5 border w-min bg-blueGray-50
+	rounded-lg shadow dark:shadow-2xl dark:bg-coolGray-800;
+}
+
+.prediction-form {
+	@apply flex flex-col p-7 border w-max bg-blueGray-50
+	rounded-lg shadow dark:shadow-2xl dark:bg-coolGray-800;
+}
+
+.repeated-attendance {
+	@apply flex flex-col p-5 border w-max bg-blueGray-50
 	rounded-lg shadow dark:shadow-2xl dark:bg-coolGray-800;
 }
 
@@ -95,5 +147,6 @@ ol {
 
 .nft-card {
 	@apply m-10 max-w-xs rounded-2xl overflow-hidden
-	shadow-xl dark:shadow-2xl dark:bg-gray-700;
+	shadow-xl dark:shadow-2xl dark:bg-gray-700
+	bg-coolGray-100;
 }

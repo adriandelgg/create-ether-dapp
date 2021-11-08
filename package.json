@@ -1,0 +1,13 @@
+{
+	"name": "typescript-nextjs-template",
+	"author": "adriandelgg",
+	"license": "MIT",
+	"scripts": {
+		"dev": "concurrently \"cd ./hardhat && npx hardhat node\" \"cd ./frontend && npm run dev\"",
+		"hardhat": "cd ./hardhat && hh node",
+		"frontend": "cd ./frontend && npm run dev"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.1"
+	}
+}

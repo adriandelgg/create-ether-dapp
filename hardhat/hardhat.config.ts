@@ -42,56 +42,56 @@ module.exports = {
 		runOnCompile: true,
 		disambiguatePaths: false
 	},
-	networks: {
-		// hardhat: {
-		// 	forking: {
-		// 		url: process.env.INFURA_KEY
-		// 	}
-		// },
-		// mainnet: {
-		// 	url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
-		// 	accounts: [process.env.PRIVATE_KEY]
-		// },
-		rinkeby: {
-			url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		kovan: {
-			url: `https://kovan.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		ropsten: {
-			url: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		goerli: {
-			url: `https://goerli.infura.io/v3/${INFURA_KEY}`
-		},
-		polygon_mainnet: {
-			url: `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		mumbai: {
-			url: `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		arbitrum_mainnet: {
-			url: `https://arbitrum-mainnet.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		arbitrum_rinkeby: {
-			url: `https://arbitrum-rinkeby.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		optimism_mainnet: {
-			url: `https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		},
-		optimism_kovan: {
-			url: `https://optimism-kovan.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
-		}
-	},
+	// networks: {
+	// 	// hardhat: {
+	// 	// 	forking: {
+	// 	// 		url: process.env.INFURA_KEY
+	// 	// 	}
+	// 	// },
+	// 	// mainnet: {
+	// 	// 	url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+	// 	// 	accounts: [process.env.PRIVATE_KEY]
+	// 	// },
+	// 	rinkeby: {
+	// 		url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	kovan: {
+	// 		url: `https://kovan.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	ropsten: {
+	// 		url: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	goerli: {
+	// 		url: `https://goerli.infura.io/v3/${INFURA_KEY}`
+	// 	},
+	// 	polygon_mainnet: {
+	// 		url: `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	mumbai: {
+	// 		url: `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	arbitrum_mainnet: {
+	// 		url: `https://arbitrum-mainnet.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	arbitrum_rinkeby: {
+	// 		url: `https://arbitrum-rinkeby.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	optimism_mainnet: {
+	// 		url: `https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	},
+	// 	optimism_kovan: {
+	// 		url: `https://optimism-kovan.infura.io/v3/${INFURA_KEY}`,
+	// 		accounts: [process.env.PRIVATE_KEY]
+	// 	}
+	// },
 	solidity: {
 		compilers: [
 			{

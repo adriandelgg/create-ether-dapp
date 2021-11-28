@@ -2,7 +2,8 @@
 	"name": "typescript-hardhat",
 	"license": "MIT",
 	"scripts": {
-		"postinstall": "npx hardhat typechain"
+		"postinstall": "npx hardhat typechain && cp -r typechain-types ../frontend/lib",
+		"typechain": "npx hardhat typechain && cp -r typechain-types ../frontend/lib"
 	},
 	"dependencies": {
 		"@openzeppelin/contracts": "^4.3.2",

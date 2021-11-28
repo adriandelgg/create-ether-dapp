@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Web3Context } from 'context/Web3Context';
+import { Web3Context } from '../Web3Context';
 import { Web3Provider } from '@ethersproject/providers';
 
 import { toast } from 'react-toastify';

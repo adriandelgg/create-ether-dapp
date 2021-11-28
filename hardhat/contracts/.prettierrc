@@ -8,7 +8,7 @@
         "useTabs": true,
         "singleQuote": false,
         "bracketSpacing": false,
-        "explicitTypes": "preserve"
+        "explicitTypes": "never"
       }
     }
   ]

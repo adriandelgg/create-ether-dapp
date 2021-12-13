@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { ethers } from 'hardhat';
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
-import { Greeter__factory, Greeter } from '../typechain/index';
+import { Greeter__factory, Greeter } from '../typechain-types/index';
 
 describe('Greeter', function () {
 	const oneEther = ethers.utils.parseEther('1');

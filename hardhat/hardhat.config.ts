@@ -24,6 +24,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 });
 
 const INFURA_KEY = process.env.INFURA_API_KEY;
+const PRIVATE_KEY =
+	process.env.PRIVATE_KEY || // This is the private key for test account #0
+	"ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -45,51 +48,52 @@ module.exports = {
 	networks: {
 		// hardhat: {
 		// 	forking: {
-		// 		url: process.env.INFURA_KEY
+		// 		url: INFURA_KEY
 		// 	}
 		// },
 		// mainnet: {
 		// 	url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
-		// 	accounts: [process.env.PRIVATE_KEY]
+		// 	accounts: [PRIVATE_KEY]
 		// },
 		rinkeby: {
 			url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		kovan: {
 			url: `https://kovan.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		ropsten: {
 			url: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		goerli: {
-			url: `https://goerli.infura.io/v3/${INFURA_KEY}`
+			url: `https://goerli.infura.io/v3/${INFURA_KEY}`,
+			accounts: [PRIVATE_KEY]
 		},
 		polygon_mainnet: {
 			url: `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		mumbai: {
 			url: `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		arbitrum_mainnet: {
 			url: `https://arbitrum-mainnet.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		arbitrum_rinkeby: {
 			url: `https://arbitrum-rinkeby.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		optimism_mainnet: {
 			url: `https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		},
 		optimism_kovan: {
 			url: `https://optimism-kovan.infura.io/v3/${INFURA_KEY}`,
-			accounts: [process.env.PRIVATE_KEY]
+			accounts: [PRIVATE_KEY]
 		}
 	},
 	solidity: {

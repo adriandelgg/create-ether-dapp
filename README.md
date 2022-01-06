@@ -1,10 +1,10 @@
-# 🧰 DApp Building Template with TypeScript
+# 🧰 DApp Building Template with TypeScript 🔥
 
-An Ethereum template to help you get building ASAP with all the necessary tools you'll actually use!🛠️
+🛠️ An Ethereum template to help you get building ASAP with all the necessary tools you'll actually use!
 
-This template allows you to build Full-Stack Blockchain Applications.⛓️
+⛓️ This template allows you to build Full-Stack Blockchain Applications.
 
-All the sections below utilize the power of TypeScript.💥
+💥 All the sections below utilize the power of TypeScript.
 
 ## Technologies Used
 

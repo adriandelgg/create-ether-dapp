@@ -6,13 +6,16 @@
 
 💥 All the sections below utilize the power of TypeScript.
 
+Don't need everything in this template?
+Feel free to remove the folder you won't need and use the rest!
+
 ## Technologies Used
 
 🎨 __Front-end:__
 Next.js (React), Tailwind CSS, Ethers.js, MetaMask, IPFS, Pinata
 
 👷‍♂️ __Smart Contracts:__
-Hardhat, TypeChain, OpenZeppelin, Node.js, Mocha, Chai
+Solidity, Hardhat, TypeChain, OpenZeppelin, Node.js, Mocha, Chai
 
 🗃️ __Back-end:__
 Node.js, MongoDB, Mongoose, Express, Ethers.js

@@ -1,10 +1,10 @@
-import { expect } from 'chai';
-import { ethers } from 'hardhat';
-import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
-import { Greeter__factory, Greeter } from '../typechain-types/index';
+import { expect } from "chai";
+import { ethers } from "hardhat";
+import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
+import { Greeter__factory, Greeter } from "../typechain/index";
 
-describe('Greeter', function () {
-	const oneEther = ethers.utils.parseEther('1');
+describe("Greeter", function () {
+	const oneEther = ethers.utils.parseEther("1");
 	let owner: SignerWithAddress,
 		bob: SignerWithAddress,
 		contract: Greeter,
@@ -13,7 +13,7 @@ describe('Greeter', function () {
 	beforeEach(async function () {
 		[owner, bob] = await ethers.getSigners();
 		const ContractFactory = new Greeter__factory(owner);
-		contract = await ContractFactory.deploy('Hello');
+		contract = await ContractFactory.deploy("Hello");
 		contract2 = contract.connect(bob);
 	});
 });

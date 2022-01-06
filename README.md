@@ -8,7 +8,7 @@ Front-end:
 Next.js (React), Tailwind CSS, Ethers.js, MetaMask, IPFS, Pinata
 
 Smart Contracts:
-Hardhat, TypeChain, OpenZeppelin, Node.js, MongoDB, Express.js, Mocha, Chai
+Hardhat, TypeChain, OpenZeppelin, Node.js, Mocha, Chai
 
 Back-end:
 Node.js, MongoDB, Mongoose, Express, Ethers.js

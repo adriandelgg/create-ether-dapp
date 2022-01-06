@@ -12,7 +12,7 @@
 Next.js (React), Tailwind CSS, Ethers.js, MetaMask, IPFS, Pinata
 
 👷‍♂️ __Smart Contracts:__
-Hardhat, TypeChain, OpenZeppelin, Mocha, Chai
+Hardhat, Ethers.js, TypeChain, OpenZeppelin, Mocha, Chai, Waffle
 
 🗃️ __Back-end:__
 Node.js, MongoDB, Mongoose, Express, Ethers.js

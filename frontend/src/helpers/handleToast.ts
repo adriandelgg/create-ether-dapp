@@ -1,16 +1,16 @@
-import {
-	toast,
+import type {
 	ToastOptions,
 	Theme,
 	ToastPosition,
 	TypeOptions
-} from 'react-toastify';
+} from "react-toastify";
+import { toast } from "react-toastify";
 
-function handleToast(
+export function handleToast(
 	type: TypeOptions,
 	message: string,
-	position: ToastPosition = 'top-center',
-	theme: Theme = 'colored'
+	position: ToastPosition = "top-center",
+	theme: Theme = "colored"
 ) {
 	const options: ToastOptions = {
 		type,
@@ -25,5 +25,3 @@ function handleToast(
 
 	toast(message, options);
 }
-
-export default handleToast;

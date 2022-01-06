@@ -1,8 +1,8 @@
-import { useContext } from 'react';
-import { Web3Context } from '../Web3Context';
-import { Web3Provider } from '@ethersproject/providers';
+import { useContext } from "react";
+import { Web3Context } from "../Web3Context";
+import { Web3Provider } from "@ethersproject/providers";
 
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 declare let window: any;
 
@@ -17,36 +17,35 @@ const MetaMask = () => {
 	const { account, setWeb3 } = useContext(Web3Context);
 
 	async function enableEth() {
+		const ethereum = window.ethereum;
 		try {
-			if (window.ethereum) {
-				const ethereum = window.ethereum;
-
+			if (ethereum) {
 				const provider = new Web3Provider(ethereum);
 				const [address] = await ethereum.request({
-					method: 'eth_requestAccounts'
+					method: "eth_requestAccounts"
 				});
-				const chainId = await ethereum.request({ method: 'eth_chainId' });
+				const chainId = await ethereum.request({ method: "eth_chainId" });
 
 				let contractAddress: string;
 				switch (chainId) {
-					case '0x1': // Mainnet
-						contractAddress = '';
+					case "0x1": // Mainnet
+						contractAddress = "";
 						break;
-					case '0x3': // Ropsten
-						contractAddress = '';
+					case "0x3": // Ropsten
+						contractAddress = "";
 						break;
-					case '0x4': // Rinkeby
-						contractAddress = '';
+					case "0x4": // Rinkeby
+						contractAddress = "";
 						break;
-					case '0x89': // Polygon Mainnet
-						contractAddress = '';
+					case "0x89": // Polygon Mainnet
+						contractAddress = "";
 						break;
-					case '0x13881': // Polygon Testnet
-						contractAddress = '';
+					case "0x13881": // Polygon Testnet
+						contractAddress = "";
 						break;
 					default:
 						// Hardhat Local
-						contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+						contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 				}
 
 				const signer = provider.getSigner(address);
@@ -62,9 +61,9 @@ const MetaMask = () => {
 						account
 					}));
 			} else if (window.web3) {
-				console.log('Update MetaMask');
+				console.log("Update MetaMask");
 			} else {
-				console.log('Enable MetaMask');
+				console.log("Enable MetaMask");
 			}
 		} catch (e) {
 			console.error(e);
@@ -83,11 +82,11 @@ const MetaMask = () => {
 					onClick={() =>
 						toast.info(`Your wallet address is: ${account}`, {
 							autoClose: 3000,
-							position: 'top-center',
+							position: "top-center",
 							style: {
 								width: 520
 							},
-							theme: 'colored'
+							theme: "colored"
 						})
 					}
 				>

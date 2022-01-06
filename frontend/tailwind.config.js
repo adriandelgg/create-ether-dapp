@@ -1,40 +1,30 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
-	mode: 'jit',
-	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
-	darkMode: 'class', // or 'media' or 'class'
+	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
+	darkMode: "class", // or 'media' or 'class'
 	theme: {
 		extend: {
 			fontSize: {
-				xxs: '0.55rem'
+				xxs: "0.55rem"
 			},
 			colors: {
-				blueGray: colors.blueGray,
-				trueGray: colors.trueGray,
-				coolGray: colors.coolGray,
-				warmGray: colors.warmGray,
-				lime: colors.lime,
-				emerald: colors.emerald,
-				teal: colors.teal,
-				cyan: colors.cyan,
-				sky: colors.sky,
-				orange: colors.orange,
-				violet: colors.violet,
-				fuchsia: colors.fuchsia,
-				rose: colors.rose,
 				green: {
-					bp1: '#009900',
-					bp2: '#99cc00',
-					bp3: '#088308'
+					main: "#009C00",
+					bp1: "#009900",
+					bp2: "#99cc00",
+					bp3: "#088308"
 				}
+			},
+			borderRadius: {
+				"4xl": "2em",
+				"5xl": "3em",
+				"6xl": "4em"
+			},
+			padding: {
+				11.5: "2.97em"
 			}
 		}
 	},
-	variants: {
-		extend: {}
-	},
-	plugins: [require('daisyui')],
+	plugins: [require("daisyui"), require("@tailwindcss/typography")],
 	daisyui: {
 		base: false
 	}

@@ -7,9 +7,7 @@ import helmet from "helmet";
 const app = express();
 
 mongoose
-	.connect(
-		"mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false"
-	)
+	.connect("mongodb://localhost:27017/test")
 	.then(() => console.log("Connected to MongoDB..."))
 	.catch(err => console.error("FAILED to connect to MongoDB: " + err));
 

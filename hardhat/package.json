@@ -2,7 +2,7 @@
 	"name": "typescript-hardhat",
 	"license": "MIT",
 	"scripts": {
-		"postinstall": "./scripts/typechain-copy.sh",
+		"postinstall": "npx hardhat typechain",
 		"typechain": "./scripts/typechain-copy.sh"
 	},
 	"dependencies": {

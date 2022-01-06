@@ -2,15 +2,19 @@
 
 An Ethereum template to help you get building ASAP with all the necessary tools you'll actually use!
 
+This template allows you to build Full-Stack Blockchain Applications.
+
+All the sections below utilize the power of TypeScript.
+
 ## Technologies Used
 
-Front-end:
+__Front-end:__
 Next.js (React), Tailwind CSS, Ethers.js, MetaMask, IPFS, Pinata
 
-Smart Contracts:
+__Smart Contracts:__
 Hardhat, TypeChain, OpenZeppelin, Node.js, Mocha, Chai
 
-Back-end:
+__Back-end:__
 Node.js, MongoDB, Mongoose, Express, Ethers.js
 
 ### How to Use

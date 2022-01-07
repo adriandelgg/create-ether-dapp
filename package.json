@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "concurrently \"cd ./hardhat && npx hardhat node\" \"cd ./frontend && npm run dev\"",
 		"hardhat": "cd ./hardhat && hh node",
-		"frontend": "cd ./frontend && npm run dev"
+		"frontend": "cd ./frontend && npm run dev",
+		"postinstall": "cd backend && npm install && cd ../frontend && npm install && cd ../hardhat && npm install"
 	},
 	"devDependencies": {
 		"concurrently": "^6.2.1"

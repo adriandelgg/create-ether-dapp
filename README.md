@@ -23,3 +23,12 @@ To use this template, all you have to do is select "Use this template" from with
 This will allow you to create a brand new repo using this template as a starting base.
 
 ![2022-01-06_11-13](https://user-images.githubusercontent.com/32179921/148439276-dd1618c6-50cc-45f2-99aa-654ad091fff1.png)
+
+After creating a new repo by using this one as a template, clone your new repo into your IDE of choice.
+Once cloned, go into your new cloned repo & run:
+
+```bash
+npm install
+```
+
+### Make sure to Star!🌟🤩

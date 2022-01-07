@@ -42,4 +42,6 @@ To do so, run the following command from your project's root directory.
 npm dev
 ```
 
+This utilizes a package called `concurrently` that allows you to concurrently run all instances from a single terminal.
+
 ### Make sure to Star!🌟🤩

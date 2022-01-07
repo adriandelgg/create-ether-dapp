@@ -31,4 +31,6 @@ Once cloned, go into your new cloned repo & run:
 npm install
 ```
 
+You can also `cd` into all 3 directories (`frontend`, `backend`, & `hardhat`) & run either `yarn install` or `npm install`.
+
 ### Make sure to Star!🌟🤩

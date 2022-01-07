@@ -33,4 +33,13 @@ npm install
 
 You can also `cd` into all 3 directories (`frontend`, `backend`, & `hardhat`) & run either `yarn install` or `npm install`.
 
+### Running All at the Same Time
+
+You can run the backend, frontend, and local blockchain node all from 1 single terminal instance.
+To do so, run the following command from your project's root directory.
+
+```bash
+npm dev
+```
+
 ### Make sure to Star!🌟🤩

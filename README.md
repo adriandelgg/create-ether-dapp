@@ -27,6 +27,8 @@ This will allow you to create a brand new repo using this template as a starting
 After creating a new repo by using this one as a template, clone your new repo into your IDE of choice.
 Once cloned, go into your new cloned repo & run:
 
-`$ npm install`
+```bash
+npm install
+```
 
 ### Make sure to Star!🌟🤩

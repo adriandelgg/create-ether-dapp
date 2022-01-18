@@ -1,8 +1,22 @@
 #!/usr/bin/env node
+
+"use strict";
+
+const path = require("path");
 const { execSync } = require("child_process");
 
 const redCross = "\x1b[31m✗\x1b[0m";
-const greenCheck = "\x1b[32m✓\x1b[0m";
+
+if (process.argv.length < 3) {
+	console.log("\x1b[31m", "You have to provide a name to your app.");
+	console.log("For example:");
+	console.log("    npx create-eth-ts-dapp my-app", "\x1b[0m");
+	process.exit(1);
+}
+
+const ownPath = process.cwd();
+const repoName = process.argv[2];
+const appPath = path.join(ownPath, repoName);
 
 const runCommand = command => {
 	try {
@@ -14,16 +28,35 @@ const runCommand = command => {
 	return true;
 };
 
-const repoName = process.argv[2];
+async function setup() {
+	try {
+		console.log(
+			"\x1b[33m",
+			`Cloning the repository with name ${repoName}`,
+			"\x1b[0m"
+		);
 
-console.log(`Cloning the repository with name ${repoName}`);
+		const checkedOut = runCommand(
+			`git clone --depth 1 https://github.com/adriandelgg/create-eth-ts-dapp ${repoName}`
+		);
+		if (!checkedOut) process.exit(-1);
 
-const checkedOut = runCommand(
-	`git clone --depth 1 https://github.com/adriandelgg/create-eth-ts-dapp ${repoName}`
-);
-if (!checkedOut) process.exit(-1);
+		process.chdir(appPath);
 
-const install = runCommand(`cd ${repoName} && yarn install`);
-if (!install) process.exit(-1);
+		const install = runCommand(`yarn install`);
+		if (!install) process.exit(-1);
 
-console.log("Congratulations! The downloads were successful.🎉");
+		console.log("✓ Congratulations! The downloads were successful.🎉");
+		console.log("");
+		console.log("\x1b[34m", "You can start by typing:");
+		console.log(`    cd ${repoName}`);
+		console.log("    yarn dev", "\x1b[0m");
+		console.log();
+		console.log("Check README.md for more information.");
+		console.log();
+	} catch (e) {
+		console.error(e);
+	}
+}
+
+setup();

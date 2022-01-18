@@ -23,7 +23,7 @@ const checkedOut = runCommand(
 );
 if (!checkedOut) process.exit(-1);
 
-const install = runCommand("yarn install");
+const install = runCommand(`cd ${repoName} && yarn install`);
 if (!install) process.exit(-1);
 
 console.log("Congratulations! The downloads were successful.🎉");

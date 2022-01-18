@@ -1,7 +1,7 @@
 {
 	"name": "create-eth-ts-dapp",
 	"description": "A template for building Full-Stack Blockchain Dapps using Next.js (React), TypeScript, Tailwind CSS, Hardhat, Solidity, and many more!",
-	"version": "1.1.21",
+	"version": "1.1.22",
 	"author": "Adrian Delgado",
 	"license": "MIT",
 	"bin": {
@@ -21,7 +21,7 @@
 		"dev": "concurrently \"cd ./hardhat && npx hardhat node\" \"cd ./frontend && npm run dev\"",
 		"hardhat": "cd ./hardhat && hh node",
 		"frontend": "cd ./frontend && npm run dev",
-		"postinstall": "./bin/depsinstall.sh"
+		"postinstall": "cd backend && yarn install && cd ../frontend && yarn install && cd ../hardhat && yarn install"
 	},
 	"devDependencies": {
 		"concurrently": "^6.2.1"

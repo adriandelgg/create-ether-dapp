@@ -4,7 +4,9 @@
 	"version": "1.1.0",
 	"author": "Adrian Delgado",
 	"license": "MIT",
-	"bin": "./bin/index.js",
+	"bin": {
+		"create-eth-ts-dapp": "./bin/index.js"
+	},
 	"main": "./bin/index.js",
 	"repository": {
 		"name": "adriandelgg/create-eth-ts-dapp",

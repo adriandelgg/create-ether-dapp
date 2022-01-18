@@ -32,7 +32,7 @@ async function setup() {
 	try {
 		console.log(
 			"\x1b[33m",
-			`Cloning the repository with name ${repoName}`,
+			`Creating a new Ethereum powered dapp 🔥`,
 			"\x1b[0m"
 		);
 
@@ -41,13 +41,19 @@ async function setup() {
 		);
 		if (!checkedOut) process.exit(-1);
 
+		console.log("\x1b[33m✓ Successfully cloned!\x1b[0m");
+
 		process.chdir(appPath);
 
 		const install = runCommand(`yarn install`);
 		if (!install) process.exit(-1);
 
-		console.log("✓ Congratulations! The downloads were successful.🎉");
-		console.log("");
+		console.log();
+		console.log(
+			"\x1b[33m✓ Congratulations! Installation was successful!🎉\x1b[0m"
+		);
+		console.log("Enjoy & build something great!👷");
+		console.log();
 		console.log("\x1b[34m", "You can start by typing:");
 		console.log(`    cd ${repoName}`);
 		console.log("    yarn dev", "\x1b[0m");

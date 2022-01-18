@@ -1,28 +1,29 @@
 {
 	"name": "create-eth-ts-dapp",
-	"description": "Create powerful Full-Stack Ethereum apps using TypeScript",
-	"author": "adriandelgg",
+	"description": "A template for building Full-Stack Blockchain Dapps using Next.js (React), TypeScript, Tailwind CSS, Hardhat, Solidity, and many more!",
+	"version": "1.1.0",
+	"author": "Adrian Delgado",
 	"license": "MIT",
-	"bin": "./scripts/create.js",
-	"scripts": {
-		"dev": "concurrently \"cd ./hardhat && npx hardhat node\" \"cd ./frontend && npm run dev\"",
-		"hardhat": "cd ./hardhat && hh node",
-		"frontend": "cd ./frontend && npm run dev",
-		"postinstall": "./scripts/depsinstall.sh",
-		"build": "./scripts/depsinstall.sh"
-	},
-	"devDependencies": {
-		"concurrently": "^6.2.1"
-	},
+	"bin": "./bin/index.js",
+	"main": "./bin/index.js",
 	"repository": {
 		"name": "adriandelgg/create-eth-ts-dapp",
 		"type": "git",
-		"url": "https://github.com/adriandelgg/create-eth-ts-dapp"
+		"url": "https://github.com/adriandelgg/create-eth-ts-dapp.git"
 	},
 	"bugs": {
 		"url": "https://github.com/adriandelgg/create-eth-ts-dapp/issues"
 	},
 	"homepage": "https://github.com/adriandelgg/create-eth-ts-dapp#readme",
+	"scripts": {
+		"dev": "concurrently \"cd ./hardhat && npx hardhat node\" \"cd ./frontend && npm run dev\"",
+		"hardhat": "cd ./hardhat && hh node",
+		"frontend": "cd ./frontend && npm run dev",
+		"postinstall": "./bin/depsinstall.sh"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.1"
+	},
 	"keywords": [
 		"ethers",
 		"ethereum",

@@ -1,14 +1,34 @@
 {
-	"name": "typescript-nextjs-template",
+	"name": "create-eth-ts-dapp",
+	"description": "Create powerful Full-Stack Ethereum apps using TypeScript",
 	"author": "adriandelgg",
 	"license": "MIT",
+	"bin": "./scripts/create.js",
 	"scripts": {
 		"dev": "concurrently \"cd ./hardhat && npx hardhat node\" \"cd ./frontend && npm run dev\"",
 		"hardhat": "cd ./hardhat && hh node",
 		"frontend": "cd ./frontend && npm run dev",
-		"postinstall": "cd backend && npm install && cd ../frontend && npm install && cd ../hardhat && npm install"
+		"postinstall": "./scripts/depsinstall.sh",
+		"build": "./scripts/depsinstall.sh"
 	},
 	"devDependencies": {
 		"concurrently": "^6.2.1"
-	}
+	},
+	"repository": {
+		"name": "adriandelgg/create-eth-ts-dapp",
+		"type": "git",
+		"url": "https://github.com/adriandelgg/create-eth-ts-dapp"
+	},
+	"bugs": {
+		"url": "https://github.com/adriandelgg/create-eth-ts-dapp/issues"
+	},
+	"homepage": "https://github.com/adriandelgg/create-eth-ts-dapp#readme",
+	"keywords": [
+		"ethers",
+		"ethereum",
+		"react",
+		"web3",
+		"typescript",
+		"hardhat"
+	]
 }

@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 console.log("hello");
 // const { execSync } = require("child_process");
 

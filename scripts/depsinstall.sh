@@ -1,4 +1,4 @@
 #!/bin/bash
-cd backend && npm install
-cd ../frontend && npm install
-cd ../hardhat && npm install
+cd backend && yarn install
+cd ../frontend && yarn install
+cd ../hardhat && yarn install

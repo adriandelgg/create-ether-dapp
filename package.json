@@ -1,20 +1,20 @@
 {
-	"name": "create-eth-ts-dapp",
+	"name": "create-ether-dapp",
 	"description": "A template for building Full-Stack Blockchain Dapps using Next.js (React), TypeScript, Tailwind CSS, Hardhat, Solidity, and many more!",
-	"version": "1.1.44",
+	"version": "1.1.45",
 	"author": "Adrian Delgado",
 	"license": "MIT",
 	"bin": "./bin/index.js",
 	"main": "./bin/index.js",
 	"repository": {
-		"name": "adriandelgg/create-eth-ts-dapp",
+		"name": "adriandelgg/create-ether-dapp",
 		"type": "git",
-		"url": "https://github.com/adriandelgg/create-eth-ts-dapp.git"
+		"url": "https://github.com/adriandelgg/create-ether-dapp.git"
 	},
 	"bugs": {
-		"url": "https://github.com/adriandelgg/create-eth-ts-dapp/issues"
+		"url": "https://github.com/adriandelgg/create-ether-dapp/issues"
 	},
-	"homepage": "https://github.com/adriandelgg/create-eth-ts-dapp#readme",
+	"homepage": "https://github.com/adriandelgg/create-ether-dapp#readme",
 	"scripts": {
 		"dev": "concurrently \"[ -d hardhat ] && cd ./hardhat && npx hardhat node && cd ..\" \"[ -d frontend ] && cd ./frontend && yarn dev && cd ..\" \"[ -d backend ] && cd ./backend && echo 'Please enable MongoDB server (mongod)' && yarn dev\"",
 		"hardhat": "cd ./hardhat && npx hardhat node",

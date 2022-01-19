@@ -15,14 +15,15 @@ if (process.argv.length < 3) {
 
 const ownPath = process.cwd();
 const repoName = process.argv[2];
-const appPath = path.join(ownPath, repoName);
+const appPath = path.join(ownPath, repoName); // absolute path
 const appName = path.basename(appPath);
 
 const runCommand = command => {
 	try {
 		execSync(`${command}`, { stdio: "inherit" });
 	} catch (e) {
-		console.error(`\x1b[31m✗ Failed to execute ${command}\x1b[0m`, e);
+		console.error(`\x1b[31m✗ Failed to execute ${command}\x1b[0m`);
+		console.error(`\x1b[31m${e}\x1b[0m`);
 		return false;
 	}
 	return true;
@@ -43,7 +44,10 @@ async function setup() {
 			console.log("\x1b[35mOr with `npm i -g yarn`\x1b[0m");
 			process.exit(1);
 		}
-		console.log(`\x1b[35mCreating a new Ethereum dapp in ${appName} 🔥\x1b[0m`);
+		console.log(
+			`Creating a new Ethereum Full-Stack Dapp in \x1b[32m${appPath}\x1b[0m 🔥`
+		);
+		console.log();
 
 		const checkedOut = runCommand(
 			`git clone --depth 1 https://github.com/adriandelgg/create-eth-ts-dapp.git ${repoName}`
@@ -55,9 +59,15 @@ async function setup() {
 		process.chdir(appPath);
 
 		await fs.rm(path.join(appPath, "./bin/index.js"));
-		console.log("\x1b[35mRemoved unnecessary create-eth script.\x1b[0m");
+		console.log("\x1b[35mRemoved unnecessary create-ether script.\x1b[0m");
+		await fs.rm(path.join(appPath, "./.git"), { recursive: true, force: true });
 
+		runCommand("git init");
+		console.log("Initialized new fresh Git repository.");
+
+		console.log();
 		console.log("Installing packages. This might take a couple of minutes.");
+		console.log();
 		const install = runCommand(`yarn install`);
 		if (!install) process.exit(-1);
 

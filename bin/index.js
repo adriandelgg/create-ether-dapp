@@ -61,7 +61,7 @@ async function setup() {
 		console.log("    yarn dev", "\x1b[0m");
 		console.log();
 		console.log("Check README.md for more information.");
-		console.log("Enjoy & build something great!👷 ");
+		console.log("Enjoy & build something great! 👷");
 		console.log();
 	} catch (e) {
 		console.error(e);

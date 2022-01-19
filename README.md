@@ -32,6 +32,10 @@ yarn dev
 It's required that you have `yarn` installed. If you don't, simply run `npm i -g yarn`.  
 Using `yarn create ether-dapp` ensures that you always use the latest version.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/OrKoN/newsletter-cli/master/demo.svg?sanitize=true" width="572" alt="newsletter cli demo">
+</p>
+
 Once the app is running using `yarn dev` you can view at:  
 - Frontend http://localhost:3000  
 - Backend http://localhost:5000

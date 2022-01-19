@@ -33,3 +33,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Zero-Installs (Yarn v2)
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

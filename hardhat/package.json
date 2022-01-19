@@ -1,5 +1,5 @@
 {
-	"name": "typescript-hardhat",
+	"name": "hardhat",
 	"license": "MIT",
 	"scripts": {
 		"postinstall": "npx hardhat typechain",

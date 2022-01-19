@@ -2875,9 +2875,9 @@ react-is@^16.13.1:
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-loader-spinner@^5.0.8:
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-5.0.8.tgz#e451ed3be2c6b75fcb5cdba106d7ea03e6ed212f"
-  integrity sha512-VpX+RFRdEhrH3ju+NiLcN/Oryaw7ZquH6qFHkwXU0/yhgCjeDgqoq0C/pQD8m6F0Dm8SuVXovckDL/65YBjgcw==
+  version "5.0.9"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-5.0.9.tgz#1257eed2f9793baced80aa5f4e5193aa8c62baac"
+  integrity sha512-baSBpLQhXopFAPiLzdItHtq13sRS5uvI4AADQHDw9UPdY8rnpXkQ5rMhYRY4AkKBejf07fjVfXG112lPa5fNfg==
 
 react-native-fetch-api@^2.0.0:
   version "2.0.0"

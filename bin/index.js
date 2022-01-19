@@ -34,7 +34,7 @@ async function setup() {
 		console.log(`\x1b[35m🔥 Creating a new Ethereum powered dapp 🔥\x1b[0m`);
 
 		const checkedOut = runCommand(
-			`git clone --depth 1 https://github.com/adriandelgg/create-eth-ts-dapp ${repoName}`
+			`git clone --depth 1 https://github.com/adriandelgg/create-eth-ts-dapp.git ${repoName}`
 		);
 		if (!checkedOut) process.exit(-1);
 

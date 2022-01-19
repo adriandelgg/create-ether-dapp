@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import axios, { AxiosRequestConfig } from 'axios';
+import { useState, useEffect } from "react";
+import axios, { AxiosRequestConfig } from "axios";
 
-type RequestMethods = 'GET' | 'POST' | 'PUT' | 'DELETE';
+type RequestMethods = "GET" | "POST" | "PUT" | "DELETE";
 
 /**
  * Fetches data from the given URL & handles unmounting cancellation.
@@ -41,10 +41,11 @@ const useAxios = (
 			}
 		})();
 
-		return () =>
+		return () => {
 			source.cancel(
-				'API request was cancelled because the component unmounted.'
+				"API request was cancelled because the component unmounted."
 			);
+		};
 	}, dependencies);
 
 	return [result, isLoading, setIsLoading] as const;

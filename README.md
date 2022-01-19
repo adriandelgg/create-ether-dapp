@@ -32,6 +32,8 @@ yarn dev
 It's required that you have `yarn` installed. If you don't, simply run `npm i -g yarn`.  
 Using `yarn create ether-dapp` ensures that you always use the latest version.
 
+<a href="https://asciinema.org/a/462688?autoplay=1&speed=2" target="_blank"><img src="https://asciinema.org/a/462688.svg" /></a>
+
 Once the app is running using `yarn dev` you can view at:  
 - Frontend http://localhost:3000  
 - Backend http://localhost:5000

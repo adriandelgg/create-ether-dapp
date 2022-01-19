@@ -9,7 +9,7 @@ const { execSync } = require("node:child_process");
 if (process.argv.length < 3) {
 	console.log("\x1b[31m✗", "You have to provide a name to your app.");
 	console.log("For example:");
-	console.log("    yarn create eth-ts-dapp my-app", "\x1b[0m");
+	console.log("    yarn create ether-dapp my-dapp", "\x1b[0m");
 	process.exit(1);
 }
 
@@ -36,7 +36,7 @@ async function setup() {
 			execSync("yarnpkg --version", { stdio: "ignore" });
 		} catch (error) {
 			console.error(
-				"Yarn is necessary for Create Eth Dapp. Install it by following the official documentation:"
+				"Yarn is necessary for Create Ether Dapp. Install it by following the official documentation:"
 			);
 			console.log();
 			console.log("\x1b[36mhttps://classic.yarnpkg.com/en/docs/install\x1b[0m");
@@ -50,7 +50,7 @@ async function setup() {
 		console.log();
 
 		const checkedOut = runCommand(
-			`git clone --depth 1 https://github.com/adriandelgg/create-eth-ts-dapp.git ${repoName}`
+			`git clone --depth 1 https://github.com/adriandelgg/create-ether-dapp.git ${repoName}`
 		);
 		if (!checkedOut) process.exit(-1);
 

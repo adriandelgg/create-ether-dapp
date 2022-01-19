@@ -1,14 +1,13 @@
 {
 	"name": "backend",
-	"version": "1.0.0",
 	"license": "MIT",
 	"main": "build/index.js",
+	"author": "Adrian Delgado",
 	"scripts": {
 		"start": "node build/index.js",
 		"dev": "nodemon --ignore './tests' index.ts",
 		"build": "tsc -p ."
 	},
-	"author": "Adrian Delgado",
 	"dependencies": {
 		"bcrypt": "^5.0.1",
 		"body-parser": "^1.19.0",

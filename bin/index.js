@@ -54,11 +54,8 @@ async function setup() {
 
 		process.chdir(appPath);
 
-		await fs.rm(path.join(appPath, "./bin"), {
-			recursive: true,
-			force: true
-		});
-		console.log("\x1b[35mRemoved unnecessary bin directory.\x1b[0m");
+		await fs.rm(path.join(appPath, "./bin/index.js"));
+		console.log("\x1b[35mRemoved unnecessary create-eth script.\x1b[0m");
 
 		console.log("Installing packages. This might take a couple of minutes.");
 		const install = runCommand(`yarn install`);

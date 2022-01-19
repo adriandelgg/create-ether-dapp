@@ -1,7 +1,7 @@
 {
 	"name": "create-eth-ts-dapp",
 	"description": "A template for building Full-Stack Blockchain Dapps using Next.js (React), TypeScript, Tailwind CSS, Hardhat, Solidity, and many more!",
-	"version": "1.1.42",
+	"version": "1.1.43",
 	"author": "Adrian Delgado",
 	"license": "MIT",
 	"bin": "./bin/index.js",
@@ -16,10 +16,12 @@
 	},
 	"homepage": "https://github.com/adriandelgg/create-eth-ts-dapp#readme",
 	"scripts": {
-		"dev": "concurrently \"cd ./hardhat && npx hardhat node\" \"cd ./frontend && npm run dev\" \"cd ./backend && yarn dev\"",
-		"hardhat": "cd ./hardhat && hh node",
-		"frontend": "cd ./frontend && npm run dev",
-		"postinstall": "cd backend && yarn install && cd ../frontend && yarn install && cd ../hardhat && yarn install"
+		"dev": "concurrently \"[ -d hardhat ] && cd ./hardhat && npx hardhat node && cd ..\" \"[ -d frontend ] && cd ./frontend && yarn dev && cd ..\" \"[ -d backend ] && cd ./backend && echo 'Please enable MongoDB server (mongod)' && yarn dev\"",
+		"hardhat": "cd ./hardhat && npx hardhat node",
+		"frontend": "cd ./frontend && yarn dev",
+		"backend": "cd ./backend && yarn dev",
+		"installdeps": "./bin/installDeps.sh",
+		"postinstall": "./bin/installDeps.sh"
 	},
 	"devDependencies": {
 		"concurrently": "^6.2.1"

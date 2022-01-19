@@ -1,5 +1,6 @@
 {
-	"private": true,
+	"name": "frontend",
+	"license": "MIT",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -20,6 +21,7 @@
 		"react-toggle-dark-mode": "^1.0.4"
 	},
 	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.0",
 		"@types/lodash": "^4.14.175",
 		"@types/node": "^17.0.8",
 		"@types/react": "17.0.38",

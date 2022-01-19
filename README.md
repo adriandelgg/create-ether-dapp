@@ -32,8 +32,6 @@ yarn dev
 It's required that you have `yarn` installed. If you don't, simply run `npm i -g yarn`.  
 Using `yarn create ether-dapp` ensures that you always use the latest version.
 
-[![asciicast](https://asciinema.org/a/yvInaM0HZE0jQ7VmB6yGhxhEE.svg)](https://asciinema.org/a/yvInaM0HZE0jQ7VmB6yGhxhEE?autoplay=1?preload=1?speed=2)
-
 Once the app is running using `yarn dev` you can view at:  
 - Frontend http://localhost:3000  
 - Backend http://localhost:5000
@@ -42,10 +40,6 @@ Once the app is running using `yarn dev` you can view at:
 
 To use this template, all you have to do is select "Use this template" from within the main GitHub repository of this project.  
 This will allow you to create a brand new repo using this template as a starting base.
-
-<a href="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe?autoplay=1&preload=1&speed=2" target="_blank">
-  <img src="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe.svg" />
-</a>
 
 After creating a new repo by using this one as a template, clone your new repo into your IDE of choice.
 Once cloned, go into your new cloned repo & run:

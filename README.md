@@ -32,9 +32,7 @@ yarn dev
 It's required that you have `yarn` installed. If you don't, simply run `npm i -g yarn`.  
 Using `yarn create ether-dapp` ensures that you always use the latest version.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/OrKoN/newsletter-cli/master/demo.svg?sanitize=true" width="572" alt="newsletter cli demo">
-</p>
+[![asciicast](https://asciinema.org/a/yvInaM0HZE0jQ7VmB6yGhxhEE.svg)](https://asciinema.org/a/yvInaM0HZE0jQ7VmB6yGhxhEE)
 
 Once the app is running using `yarn dev` you can view at:  
 - Frontend http://localhost:3000  
@@ -45,7 +43,7 @@ Once the app is running using `yarn dev` you can view at:
 To use this template, all you have to do is select "Use this template" from within the main GitHub repository of this project.  
 This will allow you to create a brand new repo using this template as a starting base.
 
-![2022-01-06_11-13](https://user-images.githubusercontent.com/32179921/148439276-dd1618c6-50cc-45f2-99aa-654ad091fff1.png)
+<a href="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe?autoplay=1?preload=1?speed=2" target="_blank"><img src="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe.svg" /></a>
 
 After creating a new repo by using this one as a template, clone your new repo into your IDE of choice.
 Once cloned, go into your new cloned repo & run:

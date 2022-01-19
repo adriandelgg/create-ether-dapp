@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect } from 'react';
-import type { Web3 } from './NavBar/MetaMask';
+import { createContext, useState, useEffect } from "react";
+import type { Web3 } from "./NavBar/MetaMask";
 
 declare let window: any;
 
@@ -10,13 +10,14 @@ const Web3ProviderComponent: React.FC = ({ children }) => {
 
 	// Listens for network changes to reload the page
 	useEffect(() => {
-		window.ethereum.on('chainChanged', (chainId: string) =>
+		window.ethereum.on("chainChanged", (chainId: string) =>
 			window.location.reload()
 		);
-		return () =>
-			window.ethereum.removeListener('chainChanged', (chainId: string) =>
+		return () => {
+			window.ethereum.removeListener("chainChanged", (chainId: string) =>
 				window.location.reload()
 			);
+		};
 	}, []);
 
 	// Listens for a change in account and updates state
@@ -31,8 +32,10 @@ const Web3ProviderComponent: React.FC = ({ children }) => {
 			}));
 		}
 
-		window.ethereum.on('accountsChanged', newAccount);
-		return () => window.ethereum.removeListener('accountsChanged', newAccount);
+		window.ethereum.on("accountsChanged", newAccount);
+		return () => {
+			window.ethereum.removeListener("accountsChanged", newAccount);
+		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [account]);
 

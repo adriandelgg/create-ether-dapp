@@ -1,7 +1,5 @@
-import { useContext } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { Web3Context } from "../Web3Context";
 
 import { ToastContainer } from "react-toastify";
 import MetaMask from "./MetaMask";

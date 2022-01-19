@@ -1,7 +1,6 @@
-import { useContext } from "react";
+import { useContext, Dispatch, SetStateAction } from "react";
 import { Web3Context } from "../Web3Context";
 import { Web3Provider } from "@ethersproject/providers";
-
 import { toast } from "react-toastify";
 
 declare let window: any;
@@ -10,7 +9,7 @@ export interface Web3 {
 	contract: ContractFactoryInterface;
 	provider: Web3Provider;
 	account: string;
-	setWeb3?: React.Dispatch<React.SetStateAction<Web3>>;
+	setWeb3?: Dispatch<SetStateAction<Web3>>;
 }
 
 const MetaMask = () => {

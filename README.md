@@ -43,7 +43,9 @@ Once the app is running using `yarn dev` you can view at:
 To use this template, all you have to do is select "Use this template" from within the main GitHub repository of this project.  
 This will allow you to create a brand new repo using this template as a starting base.
 
-<a href="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe?autoplay=1?preload=1?speed=2" target="_blank"><img src="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe.svg" /></a>
+<a href="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe?autoplay=1&preload=1&speed=2" target="_blank">
+  <img src="https://asciinema.org/a/vZjDXWRTqep0yf3YdngGLvToe.svg" />
+</a>
 
 After creating a new repo by using this one as a template, clone your new repo into your IDE of choice.
 Once cloned, go into your new cloned repo & run:

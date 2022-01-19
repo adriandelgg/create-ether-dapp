@@ -1,6 +1,7 @@
 {
 	"name": "frontend",
 	"license": "MIT",
+	"author": "Adrian Delgado",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",

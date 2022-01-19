@@ -1,6 +1,7 @@
 {
 	"name": "hardhat",
 	"license": "MIT",
+	"author": "Adrian Delgado",
 	"scripts": {
 		"postinstall": "npx hardhat typechain",
 		"typechain": "./scripts/typechain-copy.sh"

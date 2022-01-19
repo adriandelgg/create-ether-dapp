@@ -2,8 +2,9 @@
 
 "use strict";
 
-const path = require("path");
-const { execSync } = require("child_process");
+const path = require("node:path");
+const fs = require("node:fs/promises");
+const { execSync } = require("node:child_process");
 
 const redCross = "\x1b[31m✗\x1b[0m";
 
@@ -30,7 +31,7 @@ const runCommand = command => {
 
 async function setup() {
 	try {
-		console.log(`\x1b[32m🔥 Creating a new Ethereum powered dapp 🔥\x1b[0m`);
+		console.log(`\x1b[35m🔥 Creating a new Ethereum powered dapp 🔥\x1b[0m`);
 
 		const checkedOut = runCommand(
 			`git clone --depth 1 https://github.com/adriandelgg/create-eth-ts-dapp ${repoName}`
@@ -44,17 +45,23 @@ async function setup() {
 		const install = runCommand(`yarn install`);
 		if (!install) process.exit(-1);
 
+		await fs.rm(path.join(appPath, "./bin"), {
+			recursive: true,
+			force: true
+		});
+		console.log("\x1b[35mRemoved unneeded bin directory.\x1b[0m");
+
 		console.log();
 		console.log(
-			"\x1b[32m✓ Congratulations! Installation was successful!🎉\x1b[0m"
+			"\x1b[32m✓ Congratulations! Installation was successful! 🎉\x1b[0m"
 		);
-		console.log("🛠️Enjoy & build something great!👷");
 		console.log();
-		console.log("\x1b[34m", "You can start by typing:");
+		console.log("\x1b[36m", "You can start by typing:");
 		console.log(`    cd ${repoName}`);
 		console.log("    yarn dev", "\x1b[0m");
 		console.log();
 		console.log("Check README.md for more information.");
+		console.log("Enjoy & build something great!👷 ");
 		console.log();
 	} catch (e) {
 		console.error(e);

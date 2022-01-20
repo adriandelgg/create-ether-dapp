@@ -3,7 +3,7 @@
 	"license": "MIT",
 	"author": "Adrian Delgado",
 	"scripts": {
-		"postinstall": "npx hardhat typechain",
+		"postinstall": "./scripts/typechain-copy.sh",
 		"typechain": "./scripts/typechain-copy.sh"
 	},
 	"devDependencies": {

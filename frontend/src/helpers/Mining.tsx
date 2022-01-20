@@ -1,4 +1,4 @@
-import Loader from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
 
 export interface IMining {
 	isMining: boolean;
@@ -28,13 +28,7 @@ export const Mining = ({ isMining, txHash }: IMining) =>
 				EtherScan
 			</a>
 			<div className="flex justify-center m-10">
-				<Loader
-					visible={isMining}
-					type="TailSpin"
-					color="#F00"
-					height={150}
-					width={150}
-				/>
+				<TailSpin visible={isMining} color="#F00" height={150} width={150} />
 			</div>
 		</div>
 	) : null;

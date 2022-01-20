@@ -1,10 +1,10 @@
-import type {
+import {
 	ToastOptions,
 	Theme,
 	ToastPosition,
-	TypeOptions
+	TypeOptions,
+	toast
 } from "react-toastify";
-import { toast } from "react-toastify";
 
 export function handleToast(
 	type: TypeOptions,

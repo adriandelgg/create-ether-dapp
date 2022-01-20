@@ -1,6 +1,5 @@
 import { NavBar } from "./NavBar/NavBar";
 import Head from "next/head";
-import Image from "next/image";
 
 const Layout: React.FC = ({ children }) => (
 	<>

@@ -58,7 +58,7 @@ async function setup() {
 
 		process.chdir(appPath);
 
-		await fs.rm(path.join(appPath, "./bin", { recursive: true, force: true }));
+		await fs.rm(path.join(appPath, "./bin"), { recursive: true, force: true });
 		console.log("\x1b[35mRemoved unnecessary bin scripts.\x1b[0m");
 		await fs.rm(path.join(appPath, "./.git"), { recursive: true, force: true });
 

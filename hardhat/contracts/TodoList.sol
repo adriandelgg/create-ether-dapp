@@ -13,8 +13,6 @@ contract TodoList {
 	mapping(uint => Task) public tasks;
 
 	event TaskCreated(uint id, string content, bool completed);
-	event TaskCompleted(uint id);
-	event TaskRemoved(uint id);
 
 	constructor(string memory _content) {
 		createTask(_content);
@@ -28,12 +26,10 @@ contract TodoList {
 
 	function completeTask(uint _taskId) public {
 		tasks[_taskId].completed = true;
-		emit TaskCompleted(_taskId);
 	}
 
 	function removeTask(uint _taskId) public {
 		delete tasks[_taskId];
 		taskCount--;
-		emit TaskRemoved(_taskId);
 	}
 }

@@ -13,7 +13,7 @@ export interface Web3 {
 	setWeb3?: Dispatch<SetStateAction<Web3>>;
 }
 
-const MetaMask = () => {
+export const MetaMask = () => {
 	const { account, setWeb3 } = useContext(Web3Context);
 
 	async function enableEth() {
@@ -96,5 +96,3 @@ const MetaMask = () => {
 		</div>
 	);
 };
-
-export default MetaMask;

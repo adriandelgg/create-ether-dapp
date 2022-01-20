@@ -10,7 +10,7 @@ type RequestMethods = "GET" | "POST" | "PUT" | "DELETE";
  * @param {object} headers The request headers
  * @returns The result, isLoading, and setIsLoading
  */
-const useAxios = (
+export const useAxios = (
 	method: RequestMethods,
 	url: string,
 	config: AxiosRequestConfig = {},
@@ -50,5 +50,3 @@ const useAxios = (
 
 	return [result, isLoading, setIsLoading] as const;
 };
-
-export default useAxios;

@@ -1,11 +1,11 @@
-import { createContext, useState, useEffect } from "react";
 import type { Web3 } from "./NavBar/MetaMask";
+import { createContext, useState, useEffect } from "react";
 
 declare let window: any;
 
 export const Web3Context = createContext<Web3>(null!);
 
-const Web3ProviderComponent: React.FC = ({ children }) => {
+export const Web3Provider: React.FC = ({ children }) => {
 	const [{ contract, provider, account }, setWeb3] = useState<Web3>({} as Web3);
 
 	// Listens for network changes to reload the page
@@ -52,5 +52,3 @@ const Web3ProviderComponent: React.FC = ({ children }) => {
 		</Web3Context.Provider>
 	);
 };
-
-export default Web3ProviderComponent;

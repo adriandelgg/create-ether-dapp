@@ -2,10 +2,10 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 import { ToastContainer } from "react-toastify";
-import MetaMask from "./MetaMask";
-import DarkModeToggle from "src/helpers/DarkModeToggle";
+import { MetaMask } from "./MetaMask";
+import { DarkModeToggle } from "src/helpers/DarkModeToggle";
 
-const NavBar = () => {
+export const NavBar = () => {
 	const { asPath: path } = useRouter();
 
 	return (
@@ -32,5 +32,3 @@ const NavBar = () => {
 		</>
 	);
 };
-
-export default NavBar;

@@ -8,7 +8,7 @@ import hre from "hardhat";
 async function main() {
 	// We get the contract to deploy
 	const TodoList = await hre.ethers.getContractFactory("TodoList");
-	const todoList = await TodoList.deploy("Hello, Hardhat!");
+	const todoList = await TodoList.deploy("Hello, Builders!");
 
 	await todoList.deployed();
 

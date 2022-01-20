@@ -58,8 +58,8 @@ async function setup() {
 
 		process.chdir(appPath);
 
-		await fs.rm(path.join(appPath, "./bin/index.js"));
-		console.log("\x1b[35mRemoved unnecessary create-ether script.\x1b[0m");
+		await fs.rm(path.join(appPath, "./bin", { recursive: true, force: true }));
+		console.log("\x1b[35mRemoved unnecessary bin scripts.\x1b[0m");
 		await fs.rm(path.join(appPath, "./.git"), { recursive: true, force: true });
 
 		runCommand("git init");

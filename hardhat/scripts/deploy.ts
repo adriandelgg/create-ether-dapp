@@ -3,16 +3,16 @@
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-import hre from 'hardhat';
+import hre from "hardhat";
 
 async function main() {
 	// We get the contract to deploy
-	const Greeter = await hre.ethers.getContractFactory('Greeter');
-	const greeter = await Greeter.deploy('Hello, Hardhat!');
+	const TodoList = await hre.ethers.getContractFactory("TodoList");
+	const todoList = await TodoList.deploy("Hello, Hardhat!");
 
-	await greeter.deployed();
+	await todoList.deployed();
 
-	console.log('Greeter deployed to:', greeter.address);
+	console.log("TodoList deployed to:", todoList.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

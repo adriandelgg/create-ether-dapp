@@ -20,8 +20,8 @@
 		"hardhat": "cd ./hardhat && npx hardhat node",
 		"frontend": "cd ./frontend && yarn dev",
 		"backend": "cd ./backend && yarn dev",
-		"installdeps": "./bin/installDeps.sh",
-		"postinstall": "./bin/installDeps.sh"
+		"installdeps": "concurrently \"[ -d backend ] && cd backend && yarn install\" \"[ -d frontend ] && cd frontend && yarn install\" \"[ -d hardhat ] && cd hardhat && yarn install\"",
+		"postinstall": "concurrently \"[ -d backend ] && cd backend && yarn install\" \"[ -d frontend ] && cd frontend && yarn install\" \"[ -d hardhat ] && cd hardhat && yarn install\" \"find . -type f -name .example.env -execdir mv {} .env ';'\""
 	},
 	"devDependencies": {
 		"concurrently": "^6.2.1",

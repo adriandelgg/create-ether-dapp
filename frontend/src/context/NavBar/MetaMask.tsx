@@ -1,12 +1,13 @@
 import { useContext, Dispatch, SetStateAction } from "react";
 import { Web3Context } from "../Web3Context";
 import { Web3Provider } from "@ethersproject/providers";
+import { TodoList, TodoList__factory } from "lib/typechain-types/index";
 import { toast } from "react-toastify";
 
 declare let window: any;
 
 export interface Web3 {
-	contract: ContractFactoryInterface;
+	contract: TodoList;
 	provider: Web3Provider;
 	account: string;
 	setWeb3?: Dispatch<SetStateAction<Web3>>;
@@ -50,7 +51,7 @@ const MetaMask = () => {
 				const signer = provider.getSigner(address);
 				const account = signer._address;
 
-				const contract = Contract__factory.connect(contractAddress, signer);
+				const contract = TodoList__factory.connect(contractAddress, signer);
 
 				setWeb3 &&
 					setWeb3((prev: Web3) => ({

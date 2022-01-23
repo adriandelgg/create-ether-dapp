@@ -46,6 +46,7 @@ export const useAxios = (
 				"API request was cancelled because the component unmounted."
 			);
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, dependencies);
 
 	return [result, isLoading, setIsLoading] as const;

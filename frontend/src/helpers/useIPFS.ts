@@ -1,7 +1,7 @@
-import { create } from 'ipfs-http-client';
-import axios from 'axios';
+import { create } from "ipfs-http-client";
+import axios from "axios";
 
-const ipfs = create({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' });
+const ipfs = create({ host: "ipfs.infura.io", port: 5001, protocol: "https" });
 
 /**
  * Uploads the file to IPFS.
@@ -25,7 +25,7 @@ export async function uploadIPFS(fileBuffer: Buffer) {
  */
 export async function pinNFT(hash: string) {
 	try {
-		const url = 'https://api.pinata.cloud/pinning/pinByHash';
+		const url = "https://api.pinata.cloud/pinning/pinByHash";
 		await axios.post(
 			url,
 			{ hashToPin: hash },

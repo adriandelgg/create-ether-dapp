@@ -23,5 +23,5 @@ export function handleToast(
 		draggable: true
 	};
 
-	toast(message, options);
+	toast(message, options)
 }

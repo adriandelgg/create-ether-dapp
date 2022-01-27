@@ -6,6 +6,8 @@
 
 💥 All the sections below utilize the power of TypeScript.
 
+![giphy](https://user-images.githubusercontent.com/32179921/151410477-3e4f40a6-58a6-4c3d-9677-32daeff662fe.gif)
+
 ## Technologies Used
 
 🎨 __Front-end:__

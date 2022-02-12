@@ -10,7 +10,6 @@
 	},
 	"dependencies": {
 		"axios": "^0.25.0",
-		"daisyui": "^1.24.3",
 		"dotenv": "^14.2.0",
 		"ethers": "^5.4.6",
 		"ipfs-http-client": "^55.0.0",

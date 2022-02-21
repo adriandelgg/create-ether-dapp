@@ -1,7 +1,7 @@
 {
 	"name": "create-ether-dapp",
 	"description": "A template for building Full-Stack Blockchain Dapps using Next.js (React), TypeScript, Tailwind CSS, Hardhat, Solidity, and many more!",
-	"version": "1.1.64",
+	"version": "1.1.65",
 	"author": "Adrian Delgado",
 	"license": "MIT",
 	"bin": "./bin/index.js",

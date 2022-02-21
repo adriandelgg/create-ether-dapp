@@ -3,6 +3,8 @@
  */
 import { task } from 'hardhat/config';
 import 'dotenv/config';
+import '@openzeppelin/hardhat-upgrades';
+import '@nomiclabs/hardhat-etherscan';
 import '@nomiclabs/hardhat-ethers';
 import '@nomiclabs/hardhat-waffle';
 import '@nomiclabs/hardhat-solhint';
@@ -11,7 +13,6 @@ import '@typechain/ethers-v5';
 import 'hardhat-gas-reporter';
 import 'hardhat-contract-sizer';
 import 'solidity-coverage';
-import '@openzeppelin/hardhat-upgrades';
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -44,6 +45,7 @@ module.exports = {
 		runOnCompile: true,
 		disambiguatePaths: false
 	},
+	etherscan: { apiKey: process.env.ETHERSCAN_KEY },
 	networks: {
 		// hardhat: {
 		// 	forking: {

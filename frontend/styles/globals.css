@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -10,7 +10,7 @@
 }
 
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	/* height: 100%; */
 	@apply bg-gray-50 dark:bg-gray-800 dark:text-indigo-50;
 }
@@ -31,7 +31,7 @@ header {
 	animation: fadeInDown 1.5s;
 }
 
-main {
+500 {
 	animation: fadeInUp 1.5s;
 }
 
@@ -73,12 +73,12 @@ footer {
 }
 
 .nav-item {
-	@apply text-green-main hover:text-green-800 px-2 list-none
-	font-medium text-lg dark:text-green-bp2 dark:hover:text-yellow-400;
+	@apply text-green-500 hover:text-green-800 px-2 list-none
+	font-medium text-lg dark:text-green-600 dark:hover:text-yellow-400;
 }
 
 .active-nav {
-	@apply border-b-2 border-green-300 text-green-main list-none
+	@apply border-b-2 border-green-300 text-green-500 list-none
 	hover:text-green-800 hover:border-green-800 px-2
 	font-medium text-lg dark:text-yellow-400 dark:hover:text-yellow-500
 	dark:border-yellow-400 dark:hover:border-yellow-500;
@@ -146,13 +146,13 @@ footer {
 
 .green-btn {
 	@apply text-white font-bold py-2 px-5
-	rounded-3xl bg-green-main hover:bg-green-bp3
+	rounded-3xl bg-green-500 hover:bg-green-300
 	shadow dark:shadow-2xl;
 }
 
 .metamask-btn {
 	@apply text-white font-bold py-2 px-6
-	rounded-3xl bg-green-main hover:bg-green-bp3
+	rounded-3xl bg-green-500 hover:bg-green-300
 	shadow dark:shadow-2xl;
 }
 
@@ -167,7 +167,7 @@ footer {
 }
 
 .disabled-green-btn {
-	@apply bg-green-main text-white font-bold py-2 px-4
+	@apply bg-green-500 text-white font-bold py-2 px-4
 	rounded-3xl opacity-50 cursor-not-allowed shadow dark:shadow-2xl;
 }
 
@@ -181,7 +181,7 @@ text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10
 .selected-btn-group {
 	@apply border-gray-200 text-sm font-medium px-10 py-3
 	hover:bg-green-500 hover:text-white focus:z-10
-	focus:ring-2 focus:ring-yellow-200 w-max bg-green-bp1 text-white
+	focus:ring-2 focus:ring-yellow-200 w-max bg-green-400 text-white
 	dark:bg-green-700 dark:border-gray-600 dark:text-slate-100
 	dark:hover:bg-green-600;
 }

@@ -21,6 +21,8 @@ Node.js, MongoDB, Mongoose, Express, Ethers.js, Joi
 
 ## How to Use
 
+__NOTE: Required a UNIX terminal like Windows WSL, Bash, ZSH, Fish, Shell, etc.__
+
 ### 1. First Method (Recommended)
 
 Using the script will create a new project at `my-dapp` in the current working directory.
